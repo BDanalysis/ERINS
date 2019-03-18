@@ -12,7 +12,7 @@ Table of Contents
   
   
 --------------------------------------------------------------------------------
-1. Folder information
+1.Folder information
 --------------------------------------------------------------------------------
 When you download ERINS, you will see that there are five directories.
 1.input
