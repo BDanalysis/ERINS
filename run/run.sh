@@ -9,8 +9,9 @@ insert_size_diviation=$7
 ../software/bwa-0.7.5a/./bwa index ${ref}
 ../software/bwa-0.7.5a/./bwa mem ${ref} ${fq_name1} ${fq_name2} >all_mutation.sam
 java -classpath ../ERINS filter_all_mutation.Filter all_mutation.sam mim.sam filtered.sam unmapped.sam discordant.txt ${read_length} ${insert_size} ${insert_size_diviation} mim_readname.lst filtered_readname.lst unmapped_read.lst merged_read_name.lst
-../software/seqtk-master/./seqtk subseq ${fq_name1} merged_read_name.lst >out1.fq
-../software/seqtk-master/./seqtk subseq ${fq_name2} merged_read_name.lst >out2.fq
+java -classpath ../ERINS all_mutation_extract_read_name.Extract merged_read_name.lst pair_read_name.lst
+../software/seqtk-master/./seqtk subseq ${fq_name1} pair_read_name.lst >out1.fq
+../software/seqtk-master/./seqtk subseq ${fq_name2} pair_read_name.lst >out2.fq
 java -classpath ../ERINS all_mutation_ref_upper2lower.Upper2Lower ${ref} lower.fa
 cp lower.fa test1.fa
 da="test"

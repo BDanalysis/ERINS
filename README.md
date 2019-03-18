@@ -2,13 +2,13 @@
 Table of Contents
 --------------------------------------------------------------------------------
 
-  1.Folder information
+  1. Folder information
 
   2. Usage of ERINS
 
   3. Output
   
-  4.Platform
+  4. Platform
   
   
 --------------------------------------------------------------------------------
@@ -16,9 +16,9 @@ Table of Contents
 --------------------------------------------------------------------------------
 When you download ERINS, you will see that there are five directories.
 1.input
-This directory contains your input files, including two pairs of fastq files and a reference sequence file.
+This directory contains your input files, including a pair of fastq files and a reference sequence file.
 2.output
-This directory stores the detection results. If you use the test input in the input file to do the detection and get the same output, then you have successfully run ERINS.
+This directory stores the detection results.The example folder contains an example for verification. If you use the test input in the input file to do the detection and get the same output, then you have successfully run ERINS.
 3.run
 This directory contains the running script. If you want to do the insertion detection, run run.sh. If you want to do genotype detection, run hytero_run.sh; see below for specific usage.
 4.software
@@ -41,7 +41,7 @@ args6: insert size
 args7: insert size diviation
 
 For example, when running the test sample, you can do this:
-bash run.sh ../input/all_mutation_original.fa chr21 sim_all_mutation.fa_1_300_50_70.0_100.fq sim_all_mutation.fa_2_300_50_70.0_100.fq 100 500 30
+bash ../run/run.sh all_mutation_original.fa chr21 hytero1.fq hytero2.fq 100 500 30
 
 (2)how to run hytero_run.sh
 bash hytero_run.sh args1 args2 args3 args4 args5
@@ -51,7 +51,7 @@ args3:args3 is the name of the virtual sequence you want to generate (name it yo
 args4:first fastq file
 args5:second fastq file
 For example, when running the test sample, you can do this:
-bash hytero_run.sh ../output/insertion_result ../input/all_mutation_original.fa all_mutation_final.fa ../input/hytero1.fq ../input/hytero2.fq
+bash ../run/hytero_run.sh ../output/example/insertion_result.txt all_mutation_original.fa all_mutation_final.fa hytero1.fq hytero2.fq
 
 --------------------------------------------------------------------------------
 3.Output

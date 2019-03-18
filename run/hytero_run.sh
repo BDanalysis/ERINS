@@ -1,5 +1,4 @@
 #!/bin/bash
-#这个脚本当中，若在相应的包中可以找到相应的java文件，则是从windows拷贝过来的，若只有class文件，则源码在本机eclipse-workspace中
 insertion_result=$1
 ref=$2
 virtual_ref=$3
