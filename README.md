@@ -14,7 +14,7 @@ Table of Contents
 --------------------------------------------------------------------------------
 1.Folder information
 --------------------------------------------------------------------------------
-When you download ERINS, you will see that there are five directories.
+When you download the ERINS software package, you will see that there are five directories.
 1.input
 This directory contains your input files, including a pair of fastq files and a reference sequence file.
 2.output
